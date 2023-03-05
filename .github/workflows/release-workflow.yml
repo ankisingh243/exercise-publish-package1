@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: docker build . --file sample-packages/docker/Dockerfile --tag my-image-name:$(date +%s)
     - run: |
-          export token='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'
+          export token='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'
           echo $token
           echo $token | docker login ghcr.io -u ankisingh243 --password-stdin
           docker tag IMAGE_ID ghcr.io/OWNER/IMAGE_NAME:latest
