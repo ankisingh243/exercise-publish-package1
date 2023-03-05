@@ -25,6 +25,7 @@ jobs:
     - run: |
           export TOKEN=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
           echo $TOKEN
+    - run: |
           echo $TOKEN | docker login ghcr.io -u ankisingh243 --password-stdin
           docker tag IMAGE_ID ghcr.io/OWNER/IMAGE_NAME:latest
           docker push ghcr.io/OWNER/IMAGE_NAME:latest
